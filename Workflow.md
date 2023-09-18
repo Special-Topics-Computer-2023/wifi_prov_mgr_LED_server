@@ -1,4 +1,6 @@
 # Work flow
+## การสร้าง project ใหม่จาก ESP WiFi provision Manager และแก้ไขที่ผิดในขั้นตอนการ build
+
 1. Copy project จาก ESP WiFi provision Manager เป็น project  ใหม่ ชื่อ wifi_prov_mgr_LED_server
 2. Build project
 3. แก้ไข  sdkconfig เปลี่ยน flash size เป็น 4 MB
