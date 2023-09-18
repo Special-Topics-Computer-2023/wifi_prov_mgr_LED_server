@@ -1,4 +1,6 @@
-# Wi-Fi Provisioning Manager Example
+# Wi-Fi Provisioning Manager and LED http server 
+
+## [ถ้ามี error ตอน build ดูวิธีการแก้ไขได้ที่นี่ --> การสร้าง project ใหม่จาก ESP WiFi provision Manager และแก้ไขที่ผิดในขั้นตอนการ build](https://github.com/Special-Topics-Computer-2023/wifi_prov_mgr_LED_server/blob/main/Workflow.md)
 
 (See the README.md file in the upper level 'examples' directory for more information about examples.)
 
