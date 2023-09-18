@@ -16,3 +16,12 @@
 
 6. Build Project
 
+7. ถ้าเรียกเว็บแล้วปรากฏแบบนี้
+![image](https://github.com/Special-Topics-Computer-2023/wifi_prov_mgr_LED_server/assets/567256/ca2d6a3c-4817-41f7-be9a-f52a145ac873)
+หรือใน smartphone มีข้อความ `Header field are too long for server to interpret`
+
+มีสาเหตุมาจากการตั้งค่าความยาว buffer สำหรับ http request น้อยเกินไป (512) ให้เปลี่ยนเป็น 1024
+
+![image](https://github.com/Special-Topics-Computer-2023/wifi_prov_mgr_LED_server/assets/567256/213c08f1-f549-41b2-84a9-cbf22fb95a38)
+
+8. Build Project
