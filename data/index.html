@@ -86,8 +86,10 @@
     <div class="content">
         <div class="card">
             <h2>ONBOARD LED GPIO2</h2>
-            <p><button id="button" class="button">Toggle LED</button></p>
-            <p class="state">State: <span id="state">%s</span></p>
+            <p><button id="button_1" class="button">Toggle LED 1</button></p>
+            <p><button id="button_2" class="button">Toggle LED 2</button></p>
+            <p class="state">State: <span id="state_1">%s</span></p>
+            <p class="state">State: <span id="state_2">%s</span></p>
         </div>
     </div>
     </div>
@@ -110,25 +112,33 @@
             setTimeout(initWebSocket, 2000);
         }
         function onMessage(event) {
-            var state;
+            var state_1;
+            var state_2 ;
             console.log(event.data);
             if (event.data == "1") {
-                state = "ON";
+                state_1 = "ON";
+                state_2 = "ON";
             }
             else {
-                state = "OFF";
+                state_1 = "OFF";
+                state_2 = "OFF";
             }
-            document.getElementById('state').innerHTML = state;
+            document.getElementById('state_1').innerHTML = state_1;  // update state on web
+            document.getElementById('state_2').innerHTML = state_2;  // update state on web
         }
         function onLoad(event) {
             initWebSocket();
             initButton();
         }
         function initButton() {
-            document.getElementById('button').addEventListener('click', toggle);
+            document.getElementById('button_1').addEventListener('click', toggle_1);
+            document.getElementById('button_2').addEventListener('click', toggle_2);
         }
-        function toggle() {
+        function toggle_1() {
             websocket.send('toggle');
+        }
+        function toggle_2() {
+            websocket.send('OnOff');
         }
     </script>
 </body>
